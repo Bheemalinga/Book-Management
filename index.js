@@ -1,4 +1,8 @@
 const express = require("express");
+const dotenv = require("dotenv");
+
+// configuring the env file
+dotenv.config();
 
 // creating the rest object
 const app = express();
@@ -8,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Hello world</h1>");
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 //listening the app
 app.listen(PORT, () => {
