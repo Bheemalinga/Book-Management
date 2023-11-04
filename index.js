@@ -23,7 +23,7 @@ const app = express();
 
 //middlewares, used to modify the request and response object
 app.use(express.json()); //for parsing the request body
-//app.use(morgan("dev")); //for logging the request in the console
+app.use(morgan("dev")); //for logging the request in the console
 
 //creating rest api
 app.get("/", (req, res) => {
