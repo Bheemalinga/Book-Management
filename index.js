@@ -11,6 +11,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
+import authRoutes from "./routes/authRoute.js";
 
 // configuring the env file
 dotenv.config();
@@ -25,14 +26,17 @@ const app = express();
 app.use(express.json()); //for parsing the request body
 app.use(morgan("dev")); //for logging the request in the console
 
-//creating rest api
+// routes
+app.use("/api/auth", authRoutes);
+
+// creating rest api
 app.get("/", (req, res) => {
   res.send("<h1>Hello world</h1>");
 });
 
 const PORT = process.env.PORT || 8000;
 
-//listening the app
+// listening the app
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
