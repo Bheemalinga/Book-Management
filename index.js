@@ -1,11 +1,29 @@
-const express = require("express");
-const dotenv = require("dotenv");
+// type != commonjs. Thus, commented the below code
+// const express = require("express");
+// const dotenv = require("dotenv");
+// const mongoose = require("mongoose");
+// const morgan = require("morgan");
+// const { default: connectDB } = require("./config/db.js");
+
+// type = module. Thus, used the import statement
+import express from "express";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import morgan from "morgan";
+import connectDB from "./config/db.js";
 
 // configuring the env file
 dotenv.config();
 
+// database configuration
+connectDB();
+
 // creating the rest object
 const app = express();
+
+//middlewares, used to modify the request and response object
+app.use(express.json()); //for parsing the request body
+//app.use(morgan("dev")); //for logging the request in the console
 
 //creating rest api
 app.get("/", (req, res) => {
