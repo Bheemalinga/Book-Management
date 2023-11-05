@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./../components/Layout/Layout";
+import Layout from "./../components/Layout/Layout.js";
 
 const About = () => {
   return (
@@ -14,12 +14,27 @@ const About = () => {
         </div>
         <div className="col-md-4">
           <p className="text-justify mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            officiis obcaecati esse tempore unde ratione, eveniet mollitia,
-            perferendis eius temporibus dicta blanditiis doloremque explicabo
-            quasi sunt vero optio cum aperiam vel consectetur! Laborum enim
-            accusantium atque, excepturi sapiente amet! Tenetur ducimus aut
-            commodi illum quidem neque tempora nam.
+            About Our Bookstore Welcome to
+            <h2>Bma Book Store</h2>, your go-to online destination for all
+            things books. We are passionate about literature and committed to
+            providing you with an exceptional reading and shopping experience.
+            <br></br>
+            <br></br>
+            <h2>Our Story</h2>
+            <br></br>
+            <br></br> Our journey began in 2023 when a group of book enthusiasts
+            came together to create a platform where bookworms of all ages could
+            discover, explore, and purchase their favorite titles. Over the
+            years, we've grown into a thriving community of readers, writers,
+            and storytellers.
+            <br></br>
+            <br></br>
+            <h2>Contact Us</h2>
+            <br></br>
+            <br></br>
+            We value your feedback and welcome any questions or suggestions.
+            Feel free to reach out to us at kummarabheema@gmail.com or get in
+            touch by contact - 6300219562.
           </p>
         </div>
       </div>
