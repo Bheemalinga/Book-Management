@@ -31,7 +31,7 @@ app.use("/api/auth", authRoutes);
 
 // creating rest api
 app.get("/", (req, res) => {
-  res.send("<h1>Hello world</h1>");
+  res.send("<h1>Hello world</h1><br><br><h2>Welcome to the Ecommerce App</h2>");
 });
 
 const PORT = process.env.PORT || 8000;
